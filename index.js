@@ -15,6 +15,10 @@ app.get("/get", (req, res, next) => {
     });
 });
 
+app.get('/', function(req,res){
+    res.sendfile(__dirname + '/public/home.html');
+}); 
+
 app.post('/post', function(request, response) {
     response.send(request.body);
 });
